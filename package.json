@@ -4,7 +4,7 @@
   "description": "一款简(la)单(ji)的图片查看器",
   "main": "src/index.js",
   "scripts": {
-    "package": "parcel build ./src/page/entry/index.pug",
+    "package": "parcel build ./src/page/entry/index.pug --public-url .",
     "dev": "electron ./src/main/index.js"
   },
   "repository": {

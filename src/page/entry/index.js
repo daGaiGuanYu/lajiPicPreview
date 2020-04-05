@@ -1,1 +1,1 @@
-getElementById('h1').innerHTML = 'hahahah'
+console.log('haha')

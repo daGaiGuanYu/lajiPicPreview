@@ -10,6 +10,6 @@ module.exports = function createWindow () {
   })
 
   win.loadFile('../../dist/index.html')
-  // win.loadFile('../page/entry/index.html')
+
   win.webContents.openDevTools()
 }
