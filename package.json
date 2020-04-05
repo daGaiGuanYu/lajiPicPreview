@@ -2,10 +2,11 @@
   "name": "lajipicpreview",
   "version": "1.0.0",
   "description": "一款简(la)单(ji)的图片查看器",
-  "main": "src/index.js",
+  "main": "src/main/index.js",
   "scripts": {
     "package": "parcel build ./src/page/entry/index.pug --public-url .",
-    "dev": "electron ./src/main/index.js"
+    "dev": "electron ./src/main/index.js",
+    "make": "electron-forge make"
   },
   "repository": {
     "type": "git",
@@ -21,9 +22,43 @@
     "url": "https://github.com/daGaiGuanYu/lajiPicPreview/issues"
   },
   "homepage": "https://github.com/daGaiGuanYu/lajiPicPreview#readme",
-  "dependencies": {},
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0"
+  },
   "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.50",
+    "@electron-forge/maker-deb": "^6.0.0-beta.50",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.50",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.50",
+    "@electron-forge/maker-zip": "^6.0.0-beta.50",
     "electron": "^8.2.0",
     "pug": "^2.0.4"
+  },
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "lajipicpreview"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
   }
 }
