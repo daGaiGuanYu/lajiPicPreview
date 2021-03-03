@@ -32,7 +32,7 @@
     "@electron-forge/maker-squirrel": "^6.0.0-beta.50",
     "@electron-forge/maker-zip": "^6.0.0-beta.50",
     "electron": "^8.2.0",
-    "pug": "^2.0.4"
+    "pug": "^3.0.1"
   },
   "config": {
     "forge": {
